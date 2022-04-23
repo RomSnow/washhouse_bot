@@ -4,5 +4,11 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "washhouse_bot"
+    name := "washhouse_bot",
+    libraryDependencies += Dependencies.catsEffects,
+    libraryDependencies ++= Dependencies.doobie,
+    libraryDependencies += Dependencies.pureConfig
   )
+
+
+
